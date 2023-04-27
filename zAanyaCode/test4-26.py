@@ -14,8 +14,19 @@ print(battery_level)
 tello.set_display_brightness(100)
 tello.alternate_top_led(0,191,255,255,215,0,1) #flashes blue and gold
 str = "b0b0rrrr0b0b0000b0b0rrrr0b0b0000rrrrrrrr00000000rrrrrrrr00000000" #american flag 🏈
+'''
+b0b0rrrr
+0b0b0000
+b0b0rrrr
+0b0b0000
+rrrrrrrr
+00000000
+rrrrrrrr
+00000000
+'''
 tello.display_image(str)
 time.sleep(3)
+tello.change_image_color(str, DroneBlocksTello.RED, DroneBlocksTello.BLUE)
 tello.display_character("i")
 time.sleep(0.3)
 tello.display_heart()
